@@ -68,12 +68,13 @@ def main():
 	solver = optax.yogi(lr_schedule)
 	solver_state = solver.init(params)
 
-
-	def forward_and_loss(variables, images, labels, train, rngs=None):
-		preds, updates = model.apply(variables, images, mutable=['batch_stats'])
-		batch_stats = updates['batch_stats']
+	def forward_and_loss(variables, images, labels, deterministic):
+		preds, updates = model.apply(variables, images, deterministic=deterministic, mutable=['batch_stats'])
 		loss = optax.losses.softmax_cross_entropy_with_integer_labels(preds, labels).mean()
-		return loss, (preds, batch_stats)
+		if not deterministic:
+			batch_stats = updates['batch_stats']
+			return loss, (preds, batch_stats)
+		return loss, (preds, None)
 
 
 	train_metrics = Metrics(['loss', 'acc'])
@@ -101,7 +102,7 @@ def main():
 		)
 
 		for images, labels in (pbar := tqdm(train_loader, total=train_steps_per_epoch, desc='Training', leave=False)):
-			(loss, (preds, batch_stats)), grad = jax.value_and_grad(forward_and_loss, has_aux=True)({'params': params, 'batch_stats': batch_stats}, images, labels, True, subkey)
+			(loss, (preds, batch_stats)), grad = jax.value_and_grad(forward_and_loss, has_aux=True)({'params': params, 'batch_stats': batch_stats}, images, labels, deterministic=False)
 			updates, solver_state = solver.update(grad['params'], solver_state, params)
 			params = optax.apply_updates(params, updates)
 
@@ -115,7 +116,7 @@ def main():
 
 
 		for images, labels in (pbar := tqdm(val_loader, total=val_steps_per_epoch, desc='Validation', leave=False)):
-			loss, (preds, batch_stats) = forward_and_loss(params, images, labels, False)
+			loss, (preds, _) = forward_and_loss({'params': params, 'batch_stats': batch_stats}, images, labels, deterministic=True)
 
 			val_metrics.update({
 				'loss': loss.item(),

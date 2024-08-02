@@ -15,8 +15,8 @@ class Classifier(nn.Module):
 	backbone: nn.Module
 
 	@nn.compact
-	def __call__(self, x: jnp.ndarray):
-		x = self.backbone(x).pooler_output
+	def __call__(self, x: jnp.ndarray, deterministic: bool = True):
+		x = self.backbone(x, deterministic=deterministic).pooler_output
 		x = x.reshape((x.shape[0], -1))
 		x = nn.Dense(
 			self.num_classes, name='head', kernel_init=nn.zeros
