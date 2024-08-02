@@ -1,0 +1,5 @@
+data/
+al5083/
+__pycache__/
+*.pyc
+venv

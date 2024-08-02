@@ -1,0 +1,15 @@
+pennylane
+
+jax
+flax
+optax
+grain
+dm-pix
+
+
+datasets[jax]
+transformers[flax]
+evaluate
+
+tqdm
+pillow
