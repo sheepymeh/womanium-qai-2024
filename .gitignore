@@ -1,5 +1,8 @@
 data/
 al5083/
+
 __pycache__/
 *.pyc
 venv
+
+.DS_Store
