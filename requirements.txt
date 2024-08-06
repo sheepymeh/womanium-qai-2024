@@ -7,9 +7,15 @@ grain
 dm-pix
 
 
+tensorflow-datasets
+gcsfs
+
+
 datasets[jax]
-transformers[flax]
+regex
 evaluate
+safetensors>=0.4.1
+tokenizers<0.20
 
 tqdm
 pillow
