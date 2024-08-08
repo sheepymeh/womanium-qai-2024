@@ -66,5 +66,5 @@ We combine a pretrained ResNet-50 model with the Quanvolutional Neural Network f
 
 
 ### Project Presentation Deck:
-[The slide deck is available here on Google Slides](https://docs.google.com/presentation/d/1qUByHxJ93iQsU6faiowyLAIzHhBio2wGTxkthyWygVE/edit)
+[The slide deck is available here on Google Slides](https://docs.google.com/presentation/d/1qUByHxJ93iQsU6faiowyLAIzHhBio2wGTxkthyWygVE/preview)
 
