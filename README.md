@@ -58,7 +58,7 @@ We built a Quanvolutional Neural Network. To improve performance, we allow the Q
 
 #### Task 4
 
-We first implemented a sine function model based on a [Pennylane tutorial](https://pennylane.ai/blog/2021/10/how-to-start-learning-quantum-machine-learning/) and evaluated this, showing why it is too restrictive. We then create our quantum architecture, discussing how our model has model degrees of freedom. We finish by training our model on a summed sine and cosine function and discussing the implications in model periodic functions based on Fourier series expansions.
+We first implemented a sine function model based on a [Pennylane tutorial](https://pennylane.ai/blog/2021/10/how-to-start-learning-quantum-machine-learning/) and evaluated this, showing why it is too restrictive. We then create our quantum architecture, discussing how our model has more degrees of freedom. We finish by training our model on a summed sine and cosine function and discussing the implications in model periodic functions based on Fourier series expansions.
 
 #### Task 5
 
