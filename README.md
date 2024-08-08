@@ -43,8 +43,26 @@ Team Member 2:
 
 
 ### Project Solution:
-_Include a comprehensive summary of all important information about your project solution here._
-All necessary code files and any additional information required to judge your project solution should be included in the repository. 
+
+#### Task 1
+
+We completed the "Introduction to Quantum Computing", "Single-Qubit Gates", and "Circuits with Many Qubits" sections of the Pennylane codebook and present our original solutions and summaries about them.
+
+#### Task 2
+
+We implemented a variational classifier for the Iris dataset. To further our understanding, we extend the tutorial by classifying between 3 types of flowers. This required one-hot encoding as it is no longer a binary classification problem. We also utilize 4 features to enhance the model's abilities to classify.
+
+#### Task 3
+
+We built a Quanvolutional Neural Network. To improve performance, we allow the QNN parameters to be trained through gradients calculated by JAX. We used this task as a starting point to learn to write JAX+Pennylane code and improve performance in the simulator by using `jax.vmap`.
+
+#### Task 4
+
+
+#### Task 5
+
+We combine a pretrained ResNet-50 model with the Quanvolutional Neural Network from Task 3 sequentially. We also implemented simple image augmentations and dataset balancing to minimize overfitting.
+
 
 ### Project Presentation Deck:
 [The slide deck is available here on Google Slides](https://docs.google.com/presentation/d/1qUByHxJ93iQsU6faiowyLAIzHhBio2wGTxkthyWygVE/edit)
