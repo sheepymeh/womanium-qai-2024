@@ -3,7 +3,7 @@ pennylane
 jax
 flax
 optax
-grain
+grain-nightly
 dm-pix
 orbax-checkpoint
 
