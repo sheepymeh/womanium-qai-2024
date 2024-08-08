@@ -46,7 +46,7 @@ Team Member 2:
 
 #### Task 1
 
-We completed the "Introduction to Quantum Computing", "Single-Qubit Gates", and "Circuits with Many Qubits" sections of the Pennylane codebook and present our original solutions and summaries about them.
+We completed the "Introduction to Quantum Computing", "Single-Qubit Gates", and "Circuits with Many Qubits" sections of the Pennylane codebook and present our original solutions, summaries and explanations about them.
 
 #### Task 2
 
@@ -58,6 +58,7 @@ We built a Quanvolutional Neural Network. To improve performance, we allow the Q
 
 #### Task 4
 
+We first implemented a sine function model based on a [Pennylane tutorial](https://pennylane.ai/blog/2021/10/how-to-start-learning-quantum-machine-learning/) and evaluated this, showing why it is too restrictive. We then create our quantum architecture, discussing how our model has model degrees of freedom. We finish by training our model on a summed sine and cosine function and discussing the implications in model periodic functions based on Fourier series expansions.
 
 #### Task 5
 
