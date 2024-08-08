@@ -5,17 +5,9 @@ flax
 optax
 grain
 dm-pix
+orbax-checkpoint
 
-
-tensorflow-datasets
-gcsfs
-
-
-datasets[jax]
-regex
-evaluate
-safetensors>=0.4.1
-tokenizers<0.20
+transformers[flax]
 
 tqdm
 pillow
