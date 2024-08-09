@@ -128,7 +128,6 @@ class ResNet(nn.Module):
 						norm=norm,
 						act=self.act,
 				)(x)
-		x = jnp.mean(x, axis=(1, 2))
 		return x
 
 
