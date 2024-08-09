@@ -62,7 +62,7 @@ We first implemented a sine function model based on a [Pennylane tutorial](https
 
 #### Task 5
 
-We combine a pretrained ResNet-50 model with the Quanvolutional Neural Network from Task 3 sequentially. We also implemented simple image augmentations and dataset balancing to minimize overfitting.
+We combine a randomly initialized ResNet-18 model with the Quanvolutional Neural Network from Task 3 sequentially. We also implemented simple image augmentations and dataset balancing to minimize overfitting.
 
 
 ### Project Presentation Deck:
